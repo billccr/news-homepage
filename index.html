@@ -4,71 +4,113 @@
 <head>
 	<meta charset="utf-8">
 	<title>Frontend Mentor | News homepage</title>
-	<meta name="description" content="">
+	<meta name="description" content="homepage of W. online news magazine">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!--
 	<meta property="og:title" content="">
 	<meta property="og:type" content="">
 	<meta property="og:url" content="">
 	<meta property="og:image" content="">
+ -->
 
-	<link rel="manifest" href="site.webmanifest">
-	<link rel="apple-touch-icon" href="icon.png">
+	<link rel="manifest" href="site.webmanifest">			<!--  -->
+	<link rel="apple-touch-icon" href="icon.png">			<!--  -->
 	<!-- Place favicon.ico in the root directory -->
-	<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
 
 	<style>
 		.attribution { font-size: 11px; text-align: center; }
 		.attribution a { color: hsl(228, 45%, 44%); }
-	</style>
+	</style>				<!-- relocate these to main.css -->
 
 	<meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
 
-	Home
-	New
-	Popular
-	Trending
-	Categories
+	<header>
+		<img src="img/logo.svg" alt="W logo">
+		<img src="img/icon-menu.svg" alt="menu">
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">New</a></li>
+				<li><a href="#">Popular</a></li>
+				<li><a href="#">Trending</a></li>
+				<li><a href="#">Categories</a></li>
+			</ul>
+		</nav>
+	</header>
 
-	The Bright Future of Web 3.0?
+	<main>
+		<picture>
+			<source media="(min-width: 50rem)" srcset="img/image-web-3-desktop.jpg" alt="close-up of brightly painted wooden puzzle pieces">	<!-- width="1460" height="600" -->
+			<img src="img/image-web-3-mobile.jpg" alt="close-up of brightly painted wooden puzzle pieces">
+					<!-- width="686" height="600"  -->
+		</picture>
 
-	We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people.
-	But is it really fulfilling its promise?
+		<h1>The Bright Future of Web 3.0?</h1>
 
-	Read more
+		<p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
 
-	New
+		<a href="#">Read more</a>
+	</main>
 
-	Hydrogen VS Electric Cars
-	Will hydrogen-fueled cars ever catch up to EVs?
+	<section class="new-articles">
+		<h2>New</h2>
 
-	The Downsides of AI Artistry
-	What are the possible adverse effects of on-demand AI image generation?
+		<article>
+			<h3>Hydrogen VS Electric Cars</h3>
+			<p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+		</article>
 
-	Is VC Funding Drying Up?
-	Private funding by VC firms is down 50% YOY. We take a look at what that means.
+		<article>
+			<h3>The Downsides of AI Artistry</h3>
+			<p>What are the possible adverse effects of on-demand AI image generation?</p>
+		</article>
 
-	01
-	Reviving Retro PCs
-	What happens when old PCs are given modern upgrades?
+		<article>
+			<h3>Is VC Funding Drying Up?</h3>
+			<p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+		</article>
+	</section>
 
-	02
-	Top 10 Laptops of 2022
-	Our best picks for various needs and budgets.
+	<div class="top-articles">
+		<div>
+			<img src="img/image-retro-pcs.jpg" width="200" height="254" alt="image-retro-pcs">
+			<hgroup>
+				<p>01</p>
+				<h3>Reviving Retro PCs</h3>
+			</hgroup>
+			<p>What happens when old PCs are given modern upgrades?</p>
+		</div>
 
-	03
-	The Growth of Gaming
-	How the pandemic has sparked fresh opportunities.
+		<div>
+			<img src="img/image-top-laptops.jpg" width="200" height="254" alt="image-top-laptops">
+			<hgroup>
+				<p>02</p>
+				<h3>Top 10 Laptops of 2022</h3>
+			</hgroup>
+			<p>Our best picks for various needs and budgets.</p>
+		</div>
 
-	<div class="attribution">
-		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-		Coded by <a href="#">Your Name Here</a>.
+		<div>
+			<img src="img/image-gaming-growth.jpg" width="200" height="254" alt="image-gaming-growth">
+			<hgroup>
+				<p>03</p>
+				<h3>The Growth of Gaming</h3>
+			</hgroup>
+			<p>How the pandemic has sparked fresh opportunities.</p>
+		</div>
 	</div>
+
+	<footer class="attribution">
+		<p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+		Coded by <a href="https://bdcabrera.com">Bill Cabrera</a>.</p>
+	</footer>
 
 
 <!-- scripts -->
