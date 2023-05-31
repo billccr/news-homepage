@@ -12,6 +12,7 @@ html {
   color: #222;
   font-size: 15px;
   line-height: 1.4;
+  font-family: "Inter", sans-serif;
 }
 
 /*
@@ -78,6 +79,64 @@ textarea {
 /* ==========================================================================
 	 Author's custom styles
    ========================================================================== */
+.container {
+  margin: 2rem 1rem;
+}
+
+div.top-articles div {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+div.top-articles div img {
+  grid-column: 1;
+  object-fit: cover;
+}
+div.top-articles div .text-group {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+picture {
+  width: auto;
+}
+picture img {
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.new-articles {
+  padding: 1.4rem;
+  background-color: hsl(240, 100%, 5%);
+}
+.new-articles h2 {
+  color: hsl(35, 77%, 62%);
+}
+.new-articles h3 {
+  color: hsl(36, 100%, 99%);
+}
+.new-articles p {
+  color: hsl(233, 8%, 79%);
+}
+
+.top-articles {
+  color: hsl(236, 13%, 42%);
+}
+.top-articles hgroup p {
+  color: hsl(233, 8%, 79%);
+}
+.top-articles hgroup h3 {
+  color: hsl(240, 100%, 5%);
+}
+
+.attribution {
+  font-size: 0.8rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
 /* ==========================================================================
 	 Helper classes
    ========================================================================== */

@@ -14,3 +14,70 @@ $gray-blue: hsl(233, 8%, 79%);
 $dark-gray-blue: hsl(236, 13%, 42%);
 $very-dark-blue: hsl(240, 100%, 5%);
 
+// grid layout -- mobile
+
+.container {
+	margin: 2rem 1rem;
+}
+
+div.top-articles div {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+
+	img {
+		grid-column: 1;
+		object-fit: cover;
+	}
+	.text-group {
+		grid-column: 2;
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+}
+
+// sections
+
+picture {
+	width: auto;
+
+	img {
+		object-fit: cover;
+		max-width: 100%;
+	}
+}
+
+.new-articles {
+	padding: 1.4rem;
+	background-color: $very-dark-blue;
+
+	h2 {
+		color: $orange;
+	}
+	h3 {
+		color: $off-white;
+	}
+	p {
+		color: $gray-blue;
+	}
+}
+
+.top-articles {
+	color: $dark-gray-blue;
+
+	hgroup p {
+		color: $gray-blue;
+	}
+	hgroup h3 {
+		color: $very-dark-blue;
+	}
+}
+
+//footer
+
+.attribution {
+	font-size: 0.8rem; text-align: center;
+
+	a {
+		color: hsl(228, 45%, 44%);
+	}
+}

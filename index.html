@@ -14,6 +14,10 @@
 	<meta property="og:image" content="">
  -->
 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
 	<link rel="manifest" href="site.webmanifest">			<!--  -->
 	<link rel="apple-touch-icon" href="icon.png">			<!--  -->
 	<!-- Place favicon.ico in the root directory -->
@@ -21,16 +25,11 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
 
-	<style>
-		.attribution { font-size: 11px; text-align: center; }
-		.attribution a { color: hsl(228, 45%, 44%); }
-	</style>				<!-- relocate these to main.css -->
-
 	<meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
-
+<div class="container">
 	<header>
 		<img src="img/logo.svg" alt="W logo">
 		<img src="img/icon-menu.svg" alt="menu">
@@ -80,30 +79,36 @@
 
 	<div class="top-articles">
 		<div>
-			<img src="img/image-retro-pcs.jpg" width="200" height="254" alt="image-retro-pcs">
-			<hgroup>
-				<p>01</p>
-				<h3>Reviving Retro PCs</h3>
-			</hgroup>
-			<p>What happens when old PCs are given modern upgrades?</p>
+			<img src="img/image-retro-pcs.jpg" width="200" height="254" alt="a tabletop display of retro electronics and cassette tapes">
+			<div class="text-group">
+				<hgroup>
+					<p>01</p>
+					<h3>Reviving Retro PCs</h3>
+				</hgroup>
+				<p>What happens when old PCs are given modern upgrades?</p>
+			</div>
 		</div>
 
 		<div>
-			<img src="img/image-top-laptops.jpg" width="200" height="254" alt="image-top-laptops">
-			<hgroup>
-				<p>02</p>
-				<h3>Top 10 Laptops of 2022</h3>
-			</hgroup>
-			<p>Our best picks for various needs and budgets.</p>
+			<img src="img/image-top-laptops.jpg" width="200" height="254" alt="a close-up low-angle view of a laptop's keyboard">
+			<div class="text-group">
+				<hgroup>
+					<p>02</p>
+					<h3>Top 10 Laptops of 2022</h3>
+				</hgroup>
+				<p>Our best picks for various needs and budgets.</p>
+			</div>
 		</div>
 
 		<div>
-			<img src="img/image-gaming-growth.jpg" width="200" height="254" alt="image-gaming-growth">
-			<hgroup>
-				<p>03</p>
-				<h3>The Growth of Gaming</h3>
-			</hgroup>
-			<p>How the pandemic has sparked fresh opportunities.</p>
+			<img src="img/image-gaming-growth.jpg" width="200" height="254" alt="video game controller suspended above a person's open palm">
+			<div class="text-group">
+				<hgroup>
+					<p>03</p>
+					<h3>The Growth of Gaming</h3>
+				</hgroup>
+				<p>How the pandemic has sparked fresh opportunities.</p>
+			</div>
 		</div>
 	</div>
 
@@ -111,7 +116,7 @@
 		<p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
 		Coded by <a href="https://bdcabrera.com">Bill Cabrera</a>.</p>
 	</footer>
-
+</div>
 
 <!-- scripts -->
 	<script src="js/vendor/modernizr-3.11.2.min.js"></script>
