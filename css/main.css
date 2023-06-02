@@ -79,8 +79,17 @@ textarea {
 /* ==========================================================================
 	 Author's custom styles
    ========================================================================== */
+/* make sure images behave fluidly */
+img {
+  object-fit: cover;
+  width: auto;
+  max-width: 100%;
+  height: auto !important;
+}
+
 .container {
   margin: 2rem 1rem;
+  background-color: hsl(36, 100%, 99%);
 }
 
 div.top-articles div {
@@ -97,26 +106,82 @@ div.top-articles div .text-group {
   grid-template-columns: 1fr;
 }
 
-picture {
+header {
+  position: relative;
+  height: 2rem;
+}
+header img.logo {
+  float: left;
+  height: 2rem !important;
+}
+header img.menu-icon {
+  float: right;
+  margin-top: 0.4rem;
+}
+header nav {
+  display: none;
+}
+
+main {
+  margin-bottom: 4rem;
+}
+main picture {
   width: auto;
 }
-picture img {
+main picture img {
   object-fit: cover;
   max-width: 100%;
+  margin-top: 2rem;
+}
+main h1 {
+  font-weight: 800;
+  font-size: 2.7rem;
+  line-height: 1;
+  color: hsl(240, 100%, 5%);
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+main p {
+  color: hsl(236, 13%, 42%);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+main a {
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.4rem;
+  padding: 1rem 2rem;
+  color: hsl(36, 100%, 99%);
+  background-color: hsl(5, 85%, 63%);
 }
 
 .new-articles {
   padding: 1.4rem;
   background-color: hsl(240, 100%, 5%);
 }
+.new-articles article {
+  border-bottom: 1px solid hsl(236, 13%, 42%);
+  padding: 1rem 0;
+}
+.new-articles article:last-child {
+  border-bottom: none;
+}
 .new-articles h2 {
   color: hsl(35, 77%, 62%);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
 }
 .new-articles h3 {
   color: hsl(36, 100%, 99%);
+  font-size: 1.2rem;
 }
 .new-articles p {
   color: hsl(233, 8%, 79%);
+  line-height: 1.8;
 }
 
 .top-articles {

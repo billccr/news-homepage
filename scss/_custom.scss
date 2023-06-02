@@ -14,10 +14,19 @@ $gray-blue: hsl(233, 8%, 79%);
 $dark-gray-blue: hsl(236, 13%, 42%);
 $very-dark-blue: hsl(240, 100%, 5%);
 
+/* make sure images behave fluidly */
+img {
+	object-fit: cover;
+	width: auto;
+	max-width: 100%;
+	height: auto !important;
+}
+
 // grid layout -- mobile
 
 .container {
 	margin: 2rem 1rem;
+	background-color: $off-white;
 }
 
 div.top-articles div {
@@ -37,12 +46,58 @@ div.top-articles div {
 
 // sections
 
-picture {
-	width: auto;
+header {
+	position: relative;
+	height: 2rem;
 
-	img {
-		object-fit: cover;
-		max-width: 100%;
+	img.logo {
+		float: left;
+		height: 2rem !important;
+	}
+	img.menu-icon {
+		float: right;
+		margin-top: 0.4rem;
+	}
+	nav {
+		display: none;
+	}
+}
+
+main {
+	margin-bottom: 4rem;
+
+	picture {
+		width: auto;
+
+		img {
+			object-fit: cover;
+			max-width: 100%;
+			margin-top: 2rem;
+		}
+	}
+	h1 {
+		font-weight: 800;
+		font-size: 2.7rem;
+		line-height: 1;
+		color: $very-dark-blue;
+		margin-top: 1.5rem;
+		margin-bottom: 0;
+	}
+	p {
+		color: $dark-gray-blue;
+		line-height: 1.7;
+		margin-bottom: 1.5rem;
+	}
+	a {
+		text-decoration: none;
+		display: inline-block;
+		text-transform: uppercase;
+		font-size: 0.8rem;
+		font-weight: 700;
+		letter-spacing: 0.4rem;
+		padding: 1rem 2rem;
+		color: $off-white;
+		background-color: $red;
 	}
 }
 
@@ -50,14 +105,28 @@ picture {
 	padding: 1.4rem;
 	background-color: $very-dark-blue;
 
+	article {
+		border-bottom: 1px solid $dark-gray-blue;
+		padding: 1rem 0;
+	}
+
+	article:last-child {
+		border-bottom: none;
+	}
+
 	h2 {
 		color: $orange;
+		font-size: 2rem;
+		font-weight: 700;
+		margin: 0;
 	}
 	h3 {
 		color: $off-white;
+		font-size: 1.2rem;
 	}
 	p {
 		color: $gray-blue;
+		line-height: 1.8;
 	}
 }
 
