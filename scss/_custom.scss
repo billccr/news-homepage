@@ -29,6 +29,13 @@ img {
 	background-color: $off-white;
 }
 
+.content {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 3;
+	gap: 2rem;
+}
+
 div.top-articles div {
 	display: grid;
 	grid-template-columns: 1fr 2fr;
@@ -49,6 +56,7 @@ div.top-articles div {
 header {
 	position: relative;
 	height: 2rem;
+			border: 1px solid purple;		// test: get rid of
 
 	img.logo {
 		float: left;
@@ -64,7 +72,7 @@ header {
 }
 
 main {
-	margin-bottom: 4rem;
+			border: 1px solid blue;		// test: get rid of
 
 	picture {
 		width: auto;
@@ -102,8 +110,9 @@ main {
 }
 
 .new-articles {
-	padding: 1.4rem;
+	padding: 0 1.4rem;
 	background-color: $very-dark-blue;
+				border: 1px solid red;		// test: get rid of
 
 	article {
 		border-bottom: 1px solid $dark-gray-blue;
@@ -118,7 +127,7 @@ main {
 		color: $orange;
 		font-size: 2rem;
 		font-weight: 700;
-		margin: 0;
+		margin: 1rem 0 0;
 	}
 	h3 {
 		color: $off-white;
@@ -127,11 +136,13 @@ main {
 	p {
 		color: $gray-blue;
 		line-height: 1.8;
+		margin: 0;
 	}
 }
 
 .top-articles {
 	color: $dark-gray-blue;
+			border: 1px solid green;		// test: get rid of
 
 	hgroup p {
 		color: $gray-blue;
@@ -142,6 +153,9 @@ main {
 }
 
 //footer
+footer {
+	border: 1px solid red;					// test: get rid of
+}
 
 .attribution {
 	font-size: 0.8rem; text-align: center;

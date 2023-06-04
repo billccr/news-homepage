@@ -92,6 +92,13 @@ img {
   background-color: hsl(36, 100%, 99%);
 }
 
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3;
+  gap: 2rem;
+}
+
 div.top-articles div {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -109,6 +116,7 @@ div.top-articles div .text-group {
 header {
   position: relative;
   height: 2rem;
+  border: 1px solid purple;
 }
 header img.logo {
   float: left;
@@ -123,7 +131,7 @@ header nav {
 }
 
 main {
-  margin-bottom: 4rem;
+  border: 1px solid blue;
 }
 main picture {
   width: auto;
@@ -159,8 +167,9 @@ main a {
 }
 
 .new-articles {
-  padding: 1.4rem;
+  padding: 0 1.4rem;
   background-color: hsl(240, 100%, 5%);
+  border: 1px solid red;
 }
 .new-articles article {
   border-bottom: 1px solid hsl(236, 13%, 42%);
@@ -173,7 +182,7 @@ main a {
   color: hsl(35, 77%, 62%);
   font-size: 2rem;
   font-weight: 700;
-  margin: 0;
+  margin: 1rem 0 0;
 }
 .new-articles h3 {
   color: hsl(36, 100%, 99%);
@@ -182,16 +191,22 @@ main a {
 .new-articles p {
   color: hsl(233, 8%, 79%);
   line-height: 1.8;
+  margin: 0;
 }
 
 .top-articles {
   color: hsl(236, 13%, 42%);
+  border: 1px solid green;
 }
 .top-articles hgroup p {
   color: hsl(233, 8%, 79%);
 }
 .top-articles hgroup h3 {
   color: hsl(240, 100%, 5%);
+}
+
+footer {
+  border: 1px solid red;
 }
 
 .attribution {
