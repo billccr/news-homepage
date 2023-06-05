@@ -96,27 +96,34 @@ img {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 3;
+  gap: 4rem;
+}
+
+div.top-articles {
+  display: grid;
+  grid-template-rows: 3;
   gap: 2rem;
 }
 
 div.top-articles div {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 30% auto;
+  gap: 1.5rem;
 }
 div.top-articles div img {
   grid-column: 1;
-  object-fit: cover;
 }
 div.top-articles div .text-group {
   grid-column: 2;
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: 0;
 }
 
 header {
   position: relative;
   height: 2rem;
-  border: 1px solid purple;
 }
 header img.logo {
   float: left;
@@ -130,9 +137,6 @@ header nav {
   display: none;
 }
 
-main {
-  border: 1px solid blue;
-}
 main picture {
   width: auto;
 }
@@ -169,11 +173,10 @@ main a {
 .new-articles {
   padding: 0 1.4rem;
   background-color: hsl(240, 100%, 5%);
-  border: 1px solid red;
 }
 .new-articles article {
   border-bottom: 1px solid hsl(236, 13%, 42%);
-  padding: 1rem 0;
+  padding: 1rem 0 1.8rem;
 }
 .new-articles article:last-child {
   border-bottom: none;
@@ -187,6 +190,7 @@ main a {
 .new-articles h3 {
   color: hsl(36, 100%, 99%);
   font-size: 1.2rem;
+  margin: 1rem 0 0.5rem;
 }
 .new-articles p {
   color: hsl(233, 8%, 79%);
@@ -196,25 +200,46 @@ main a {
 
 .top-articles {
   color: hsl(236, 13%, 42%);
-  border: 1px solid green;
+}
+.top-articles img {
+  object-fit: cover;
+  width: auto;
+  max-width: 100%;
+  height: auto;
 }
 .top-articles hgroup p {
   color: hsl(233, 8%, 79%);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 .top-articles hgroup h3 {
   color: hsl(240, 100%, 5%);
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin: 0;
+}
+.top-articles p {
+  margin: 0;
+}
+.top-articles .text-group > p {
+  line-height: 1.7rem;
 }
 
 footer {
-  border: 1px solid red;
+  display: block;
+  width: calc(100% - 2rem);
+  position: absolute;
+  bottom: 1rem;
 }
 
 .attribution {
   font-size: 0.8rem;
   text-align: center;
+  color: hsl(236, 13%, 42%);
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(5, 85%, 63%);
 }
 
 /* ==========================================================================
