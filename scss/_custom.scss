@@ -113,9 +113,12 @@ main {
 		color: $off-white;
 		background-color: $red;
 	}
+	a:hover {
+		background-color: $very-dark-blue;
+	}
 }
 
-//sidebar in desktop
+// sidebar in desktop
 
 .new-articles {
 	padding: 0 1.4rem;
@@ -137,9 +140,15 @@ main {
 		margin: 1rem 0 0;
 	}
 	h3 {
-		color: $off-white;
 		font-size: 1.2rem;
 		margin: 1rem 0 0.5rem;
+		a {
+			color: $off-white;
+			text-decoration: none;
+		}
+		a:hover {
+			color: $orange;
+		}
 	}
 	p {
 		color: $gray-blue;
@@ -164,10 +173,16 @@ main {
 		margin-bottom: .5rem;
 	}
 	hgroup h3 {
-		color: $very-dark-blue;
 		font-size: 1.2rem;
 		line-height: 1.2;
 		margin: 0;
+		a {
+			color: $very-dark-blue;
+			text-decoration: none;
+		}
+		a:hover {
+			color: $red;
+		}
 	}
 	p {
 		margin: 0;
@@ -180,9 +195,10 @@ main {
 //footer
 footer {
 	display: block;
-	width: calc(100% - 2rem);
-	position: absolute;
-	bottom: 1rem;
+	height: 2rem;
+	width: calc(100% - 1rem);
+	position: relative;
+	top: 1rem;
 }
 
 .attribution {
@@ -191,5 +207,9 @@ footer {
 
 	a {
 		color: $red;
+	}
+	a:hover {
+		color: $orange;
+		text-decoration: none;
 	}
 }
