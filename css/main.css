@@ -339,38 +339,92 @@ footer {
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
+   Media Queries for Responsive Design.
    ========================================================================== */
 @media only screen and (min-width: 40rem) {
   /* Style adjustments for viewports that meet the condition */
   .container {
-    padding: 11rem;
+    padding: 4rem 10rem;
+  }
+  header {
+    height: 4rem;
+  }
+  header img.logo {
+    height: 2.5rem !important;
+  }
+  header img.menu-icon {
+    display: none;
+  }
+  header nav {
+    display: block;
+    float: right;
+  }
+  header nav li {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding-left: 2.5rem;
+  }
+  header nav li a {
+    color: hsl(236, 13%, 42%);
+    text-decoration: none;
+  }
+  header nav li a:hover {
+    color: hsl(35, 77%, 62%);
   }
   .content {
+    padding: 2rem 0 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 2;
-    gap: 4rem;
+    gap: 4.5rem 2rem;
   }
   main {
     grid-column: 1/3;
     grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  main picture {
+    grid-column: 1/3;
+    grid-row: 1;
+  }
+  main picture img {
+    margin-top: 0;
+  }
+  main h1 {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    font-size: 3.7rem;
+  }
+  main a {
+    display: border-box;
+    width: 9rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  main p {
+    line-height: 1.6rem;
   }
   .new-articles {
     grid-column: 3/4;
   }
-  .top-articles {
-    grid-row: 2;
-    grid-column: 1;
-    grid-template: repeat(3, 1fr);
-    grid-template-rows: 1;
-    gap: 0rem;
+  .new-articles h2 {
+    font-size: 2.5rem;
+    margin: 1.2rem 0 0;
   }
-  .top-articles div {
-    display: block;
-    width: 1fr;
+  .top-articles {
+    width: 100%;
+    grid-row: 2;
+    grid-column: 1/4;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1;
+    gap: 2rem;
+  }
+  .top-articles > div {
+    display: grid;
+    gap: 1.5rem;
   }
 }
 /* ********************************************
