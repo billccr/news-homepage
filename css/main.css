@@ -13,6 +13,7 @@ html {
   font-size: 15px;
   line-height: 1.4;
   font-family: "Inter", sans-serif;
+  background-color: hsl(36, 100%, 99%);
 }
 
 /*
@@ -344,7 +345,7 @@ footer {
 @media only screen and (min-width: 40rem) {
   /* Style adjustments for viewports that meet the condition */
   .container {
-    padding: 4rem 0rem;
+    padding: 5.8rem 0 0;
     width: 77vw;
     margin: 0 auto;
   }
@@ -363,12 +364,13 @@ footer {
   header nav {
     display: block;
     float: right;
+    margin-bottom: 1.2rem;
   }
   header nav li {
     display: inline-block;
     text-decoration: none;
     font-size: 1.1rem;
-    padding-left: 2.5rem;
+    padding-left: 2.1rem;
   }
   header nav li a {
     color: hsl(236, 13%, 42%);
@@ -433,6 +435,10 @@ footer {
   .top-articles > div {
     display: grid;
     gap: 1.5rem;
+  }
+  footer {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
 }
 /* ********************************************
