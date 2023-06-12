@@ -25,20 +25,18 @@ img {
 // grid layout -- mobile
 
 .container {
-	margin: 2rem 1rem;
+	margin: 2rem 4vw;
 	background-color: $off-white;
 }
 
 .content {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 3;
 	gap: 4rem;
 }
 
 div.top-articles {
 	display: grid;
-	grid-template-rows: 3;
 	gap: 2rem;
 }
 
