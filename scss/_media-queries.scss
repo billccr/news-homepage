@@ -2,6 +2,7 @@
 /* ==========================================================================
    Media Queries for Responsive Design.
    ========================================================================== */
+$red: hsl(5, 85%, 63%);
 $orange: hsl(35, 77%, 62%);
 $gray-blue: hsl(233, 8%, 79%);
 $dark-gray-blue: hsl(236, 13%, 42%);
@@ -12,12 +13,9 @@ $dark-gray-blue: hsl(236, 13%, 42%);
 	.container {
 		width: 77vw;
 		max-width: 74rem;
+		min-width: 50rem;
 		padding: 5.8rem 0 0;
 		margin: 0 auto;
-	}
-
-	.content {
-		min-width: 50rem;		// temp: find and hold where it breaks down
 	}
 
 	header {
@@ -50,6 +48,7 @@ $dark-gray-blue: hsl(236, 13%, 42%);
 	}
 
 	.content {
+		min-width: 50rem;
 		padding: 2rem 0 0;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
@@ -62,6 +61,7 @@ $dark-gray-blue: hsl(236, 13%, 42%);
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 1rem;
+
 		picture {
 			grid-column: 1 / 3;
 			grid-row: 1;
@@ -77,10 +77,9 @@ $dark-gray-blue: hsl(236, 13%, 42%);
 		a {
 			box-sizing: border-box;
 			width: 13rem;
-			height: 3rem;
+			height: 3.2rem;
 			font-size: 0.9rem;
 			text-align: center;
-			margin: auto 0 0;		// keep it at the bottom of grid cell
 		}
 		p {
 			line-height: 1.6rem;
@@ -92,7 +91,6 @@ $dark-gray-blue: hsl(236, 13%, 42%);
 		h2 {
 			font-size: 2.5rem;
 			margin: 1.2rem 0 0;
-			min-width: 19rem;		// keep section from growing vertically
 		}
 	}
 
@@ -102,6 +100,9 @@ $dark-gray-blue: hsl(236, 13%, 42%);
 		grid-column: 1 / 4;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 2rem;
+		hgroup h3 {
+			font-size: 1.2rem;
+		}
 	}
 	.top-articles > div {
 		display: grid;
