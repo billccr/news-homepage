@@ -132,8 +132,35 @@ header img.menu-icon {
   float: right;
   margin-top: 0.4rem;
 }
-header nav {
-  display: none;
+header #navmenu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: hsl(36, 100%, 99%);
+  overflow-x: hidden;
+  padding-top: 7rem;
+  transition: 0.5s;
+}
+header #navmenu li {
+  padding: 0.7rem 0.7rem 0.7rem 0px;
+  display: block;
+  transition: 0.3s;
+}
+header #navmenu li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: hsl(240, 100%, 5%);
+}
+header #navmenu li a:hover {
+  color: hsl(5, 85%, 63%);
+}
+header #navmenu li a.close-btn {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
 }
 
 main picture {
