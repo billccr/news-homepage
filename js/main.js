@@ -1,15 +1,18 @@
-// Set the width of the side navigation to 250px and the
-// left margin of the page content to 250px and add a black background color to body
+
+// open and close mobile navigation menu & apply overlay to rest of page
+
+// may need 'if' for breakpoint
+
 function openNav() {
-  document.getElementById("navmenu").style.width = "250px";
-//  document.getElementById("main").style.marginRight = "250px";
-  document.querySelector(".container").style.backgroundColor = "rgba(0,0,0,0.6)";
+	// enable the overlay
+	document.querySelector(".overlay").style.display = "block";
+	// set width of side navigation
+	document.querySelector("nav").style.width = "250px";
 }
 
-// Set the width of the side navigation to 0 and the
-// left margin of the page content to 0, and the background color of body to white
 function closeNav() {
-  document.getElementById("navmenu").style.width = "0";
-//  document.getElementById("main").style.marginRight = "0";
-  document.body.style.backgroundColor = "white";
+	// remove overlay by clearing 'block'
+	document.querySelector(".overlay").style.display = "none";
+	// hide side navigation
+	document.querySelector("nav").style.width = "0";
 }

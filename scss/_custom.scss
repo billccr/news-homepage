@@ -59,6 +59,21 @@ div.top-articles div {
 
 // sections
 
+// ____________ opaque overlay when mobile menu displayed
+.overlay {
+	position: fixed; 	// Sit on top of the page content
+	display: none; 		// Hidden by default
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 1; 		// Specify stack order
+	cursor: pointer; 	// Add a pointer on hover
+}
+
 header {
 	position: relative;
 	height: 2rem;
@@ -71,16 +86,16 @@ header {
 		float: right;
 		margin-top: 0.4rem;
 	}
-	nav {
+//	nav {
 //		display: none;
-	}
+//	}
 
 // _________ sliding nav menu for mobile layout
-	#navmenu {
+	nav {
 		height: 100%;
 		width: 0;         // 0 width - change this with JavaScript
 		position: fixed;  // Stay in place
-		z-index: 1;       // Stay on top
+		z-index: 2;       // Stay on top
 		top: 0;
 		right: 0;
 		background-color: $off-white;

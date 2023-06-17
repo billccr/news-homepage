@@ -120,6 +120,20 @@ div.top-articles div .text-group {
   gap: 0;
 }
 
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  cursor: pointer;
+}
+
 header {
   position: relative;
   height: 2rem;
@@ -132,11 +146,11 @@ header img.menu-icon {
   float: right;
   margin-top: 0.4rem;
 }
-header #navmenu {
+header nav {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   right: 0;
   background-color: hsl(36, 100%, 99%);
@@ -144,20 +158,20 @@ header #navmenu {
   padding-top: 7rem;
   transition: 0.5s;
 }
-header #navmenu li {
+header nav li {
   padding: 0.7rem 0.7rem 0.7rem 0px;
   display: block;
   transition: 0.3s;
 }
-header #navmenu li a {
+header nav li a {
   text-decoration: none;
   font-size: 1.2rem;
   color: hsl(240, 100%, 5%);
 }
-header #navmenu li a:hover {
+header nav li a:hover {
   color: hsl(5, 85%, 63%);
 }
-header #navmenu li a.close-btn {
+header nav li a.close-btn {
   position: absolute;
   top: 2rem;
   right: 1rem;
@@ -374,39 +388,54 @@ footer {
     width: 77vw;
     max-width: 74rem;
     min-width: 50rem;
-    padding: 5.8rem 0 0;
+    padding: 5rem 0 0;
     margin: 0 auto;
   }
   header {
-    height: 4rem;
+    height: 3rem;
+    position: relative;
   }
   header img.logo {
-    height: 2.5rem !important;
+    height: 2.6rem !important;
+    margin-top: 1rem;
   }
   header img.menu-icon {
     display: none;
   }
   header nav {
+    width: auto;
+    height: auto;
     display: block;
+    position: relative;
+    top: 0;
     float: right;
-    margin-bottom: 1.2rem;
+    z-index: 0;
+    padding-top: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  header nav ul {
+    position: relative;
+    top: 0;
   }
   header nav li {
     display: inline-block;
-    text-decoration: none;
-    font-size: 1.1rem;
-    padding-left: 2.1rem;
+    padding-left: 1.5rem;
   }
   header nav li a {
     color: hsl(236, 13%, 42%);
+    font-size: 1.1rem;
     text-decoration: none;
   }
   header nav li a:hover {
     color: hsl(35, 77%, 62%);
   }
+  header nav li a.close-btn {
+    display: none;
+  }
   .content {
     min-width: 50rem;
-    padding: 2rem 0 0;
+    padding: 2.5rem 0 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 4.5rem 2rem;
@@ -432,9 +461,12 @@ footer {
   }
   main a {
     box-sizing: border-box;
-    width: 13rem;
+    width: 12.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     height: 3.2rem;
     font-size: 0.9rem;
+    letter-spacing: 0.3rem;
     text-align: center;
   }
   main p {
