@@ -1,7 +1,5 @@
 
-// open and close mobile navigation menu & apply overlay to rest of page
-
-// may need 'if' for breakpoint
+// open and close mobile navigation menu & apply semi-tranparent overlay to rest of page
 
 function openNav() {
 	// enable the overlay

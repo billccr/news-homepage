@@ -59,7 +59,7 @@ div.top-articles div {
 
 // sections
 
-// ____________ opaque overlay when mobile menu displayed
+// ____________ opaque adjacent overlay when mobile menu displayed
 .overlay {
 	position: fixed; 	// Sit on top of the page content
 	display: none; 		// Hidden by default
@@ -70,7 +70,7 @@ div.top-articles div {
 	right: 0;
 	bottom: 0;
 	background-color: rgba(0, 0, 0, 0.6);
-	z-index: 1; 		// Specify stack order
+	z-index: 1; 		// Specify stack order above content
 	cursor: pointer; 	// Add a pointer on hover
 }
 
@@ -86,9 +86,6 @@ header {
 		float: right;
 		margin-top: 0.4rem;
 	}
-//	nav {
-//		display: none;
-//	}
 
 // _________ sliding nav menu for mobile layout
 	nav {
@@ -101,7 +98,7 @@ header {
 		background-color: $off-white;
 		overflow-x: hidden;  // Disable horizontal scroll
 		padding-top: 7rem;   // Place content 60px from the top
-		transition: 0.5s;    // 0.5 second transition effect to slide in the sidenav
+		transition: 0.5s;    // 0.5 second slide in the sidenav
 
 		li {
 			padding: .7rem .7rem .7rem 0px;
@@ -222,7 +219,7 @@ main {
 		margin-bottom: .5rem;
 	}
 	hgroup h3 {
-		font-size: clamp(1.2rem, 4vw, 2.5rem);		// was 1.2rem
+		font-size: clamp(1.2rem, 4vw, 2.5rem);
 		line-height: 1.2;
 		margin: 0;
 		a {
