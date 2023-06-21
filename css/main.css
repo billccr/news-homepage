@@ -171,10 +171,13 @@ header nav li a {
 header nav li a:hover {
   color: hsl(5, 85%, 63%);
 }
-header nav li a.close-btn {
+header nav li button {
   position: absolute;
   top: 2rem;
   right: 1rem;
+  background-color: transparent;
+  border: none;
+  height: 1.2rem;
 }
 
 main picture {
@@ -430,7 +433,7 @@ footer {
   header nav li a:hover {
     color: hsl(35, 77%, 62%);
   }
-  header nav li a.close-btn {
+  header nav li button {
     display: none;
   }
   .content {

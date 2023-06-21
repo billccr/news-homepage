@@ -24,12 +24,14 @@
 <div class="container">
 	<header>
 		<img class="logo" src="img/logo.svg" alt="W logo">
-		<img class="menu-icon"src="img/icon-menu.svg" alt="menu" title="website menu"
+		<img class="menu-icon" src="img/icon-menu.svg" alt="menu" title="website menu"
 			onclick="openNav()">
 		<nav id="navmenu">
 			<ul>
-				<li><a href="javascript:void(0)" class="close-btn" onclick="closeNav()">
-					<img class="close-btn" src="img/icon-menu-close.svg"></a></li>
+				<li>
+					<button aria-label="Close" class="close-btn" onclick="closeNav()">
+						<img src="img/icon-menu-close.svg">
+					</button></li>
 				<li><a href="#">Home</a></li>
 				<li><a href="#">New</a></li>
 				<li><a href="#">Popular</a></li>
@@ -42,7 +44,7 @@
 	<div class="content">
 		<main>
 			<picture>
-				<source media="(min-width: 40rem)" srcset="img/image-web-3-desktop.jpg" alt="close-up of brightly painted wooden toy building blocks">	<!-- width="1460" height="600" -->
+				<source media="(min-width: 40rem)" srcset="img/image-web-3-desktop.jpg">	<!-- width="1460" height="600" -->
 				<img src="img/image-web-3-mobile.jpg" alt="close-up of brightly painted wooden toy building blocks">
 						<!-- width="686" height="600"  -->
 			</picture>

@@ -55,9 +55,9 @@ $dark-gray-blue: hsl(236, 13%, 42%);
 					&:hover {
 						color: $orange;
 					}
-					&.close-btn {
-						display: none;
-					}
+				}
+				button {
+					display: none;
 				}
 			}
 		}
