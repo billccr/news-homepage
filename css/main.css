@@ -99,20 +99,20 @@ img {
   gap: 4rem;
 }
 
-div.top-articles {
+.top-articles {
   display: grid;
   gap: 2rem;
 }
 
-div.top-articles div {
+.top-articles div {
   display: grid;
   grid-template-columns: 30% auto;
   gap: 1.5rem;
 }
-div.top-articles div img {
+.top-articles div img {
   grid-column: 1;
 }
-div.top-articles div .text-group {
+.top-articles div .text-group {
   grid-column: 2;
   display: grid;
   grid-template-columns: 1fr;
@@ -142,9 +142,14 @@ header img.logo {
   float: left;
   height: 2rem !important;
 }
-header img.menu-icon {
+header button {
   float: right;
   margin-top: 0.4rem;
+  border: none;
+  background-color: transparent;
+}
+header button:focus {
+  background-color: lightblue;
 }
 header nav {
   height: 100%;
@@ -163,21 +168,32 @@ header nav li {
   display: block;
   transition: 0.3s;
 }
-header nav li a {
-  text-decoration: none;
-  font-size: 1.2rem;
-  color: hsl(240, 100%, 5%);
-}
-header nav li a:hover {
-  color: hsl(5, 85%, 63%);
-}
 header nav li button {
   position: absolute;
   top: 2rem;
   right: 1rem;
   background-color: transparent;
   border: none;
-  height: 1.2rem;
+  height: auto;
+}
+header nav li button:focus {
+  border: 2px solid lightblue;
+}
+header nav li span {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: hsl(240, 100%, 5%);
+}
+header nav li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: hsl(240, 100%, 5%);
+}
+header nav li a:hover, header nav li a:focus {
+  color: hsl(5, 85%, 63%);
+}
+header nav li a:active {
+  background-color: hsl(233, 8%, 79%);
 }
 
 main picture {
@@ -253,6 +269,9 @@ main a:hover {
 
 .top-articles {
   color: hsl(236, 13%, 42%);
+}
+.top-articles h2 {
+  display: none;
 }
 .top-articles img {
   object-fit: cover;
@@ -402,6 +421,7 @@ footer {
     height: 2.6rem !important;
     margin-top: 1rem;
   }
+  header button,
   header img.menu-icon {
     display: none;
   }
@@ -425,16 +445,24 @@ footer {
     display: inline-block;
     padding-left: 1.5rem;
   }
+  header nav li button {
+    display: none;
+  }
+  header nav li span {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: hsl(236, 13%, 42%);
+  }
   header nav li a {
     color: hsl(236, 13%, 42%);
     font-size: 1.1rem;
     text-decoration: none;
   }
-  header nav li a:hover {
+  header nav li a:hover, header nav li a:focus {
     color: hsl(35, 77%, 62%);
   }
-  header nav li button {
-    display: none;
+  header nav li a:active {
+    background-color: hsl(233, 8%, 79%);
   }
   .content {
     min-width: 50rem;

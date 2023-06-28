@@ -35,12 +35,12 @@ img {
 	gap: 4rem;
 }
 
-div.top-articles {
+.top-articles {
 	display: grid;
 	gap: 2rem;
 }
 
-div.top-articles div {
+.top-articles div {
 	display: grid;
 	grid-template-columns: 30% auto;
 	gap: 1.5rem;
@@ -82,9 +82,15 @@ header {
 		float: left;
 		height: 2rem !important;
 	}
-	img.menu-icon {
+	// menu open button
+	button {		// -------------------------- was img.menu-icon
 		float: right;
 		margin-top: 0.4rem;
+		border: none;
+		background-color: transparent;
+		&:focus {
+			background-color: lightblue;	// indicate selection via tabbing
+		}
 	}
 
 // _________ sliding nav menu for mobile layout
@@ -104,21 +110,35 @@ header {
 			padding: .7rem .7rem .7rem 0px;
 			display: block;
 			transition: 0.3s;
-			a {
-				text-decoration: none;
-				font-size: 1.2rem;
-				color: $very-dark-blue;
-				&:hover {
-					color: $red;
-				}
-			}
+
+			// close button
 			button {
 				position: absolute;
 				top: 2rem;
 				right: 1rem;
 				background-color: transparent;
 				border: none;
-				height: 1.2rem;
+				height: auto;
+				&:focus {
+					border: 2px solid lightblue;	// indicate selection via tabbing
+				}
+			}
+			span {	// current page
+				text-decoration: none;
+				font-size: 1.2rem;
+				color: $very-dark-blue;
+			}
+			a {
+				text-decoration: none;
+				font-size: 1.2rem;
+				color: $very-dark-blue;
+				&:hover,
+				&:focus {
+					color: $red;
+				}
+				&:active {
+					background-color: $gray-blue;
+				}
 			}
 		}
 	}
@@ -209,6 +229,9 @@ main {
 .top-articles {
 	color: $dark-gray-blue;
 
+	h2 {
+		display: none;
+	}
 	img {
 		object-fit: cover;
 		width: auto;
