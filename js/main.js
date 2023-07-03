@@ -1,52 +1,68 @@
 // open and close mobile navigation menu & apply semi-tranparent overlay to rest of page
 
-function closeNav() {
-	// hide side navigation
-	document.querySelector("nav").style.width = "0";
-	// remove overlay by clearing 'block'
-	document.querySelector(".overlay").style.display = "none";
-	// set aria-expanded to false on appropriate element
-	const menuBtn = document.querySelector("#menu-btn");
-	menuBtn.removeAttribute("aria-expanded");
+const menuBtn = document.querySelector("#menu-btn");
+const closeBtn = document.querySelector(".close-btn");
+const navmenu = document.querySelector("#navmenu");
+const mediaQuery = window.matchMedia('(max-width: 50rem)');
 
-	// no tabbing to hidden links
-	const links = document.querySelectorAll("#navmenu li a");
-	links.forEach(link => {
-		console.log(link);
-		link.setAttribute("tabindex", "-1");
-	});
-}
-
-// when menu closed, should be no tabbing of hidden (menu) links (tabindex -1?)
-// when open:
-//		transfer focus to next li from menu button
-//		tabbing should be confined to menu
-//		esc or click off-menu should close menu
-//		arrow keys should navigate within menu
 
 function openNav() {
-	// enable the overlay
+	// enable semi-transparent overlay & set width of slide-in menu
 	document.querySelector(".overlay").style.display = "block";
-	// set width of side navigation
-	document.querySelector("nav").style.width = "250px";
+	document.querySelector("nav").style.width = "17rem";
 
-// following would need All selector & forEach, and be reset in closeNav()
-//	document.querySelector(".content").setAttribute("tabindex", -1);
-
-	const menuBtn = document.querySelector("#menu-btn");
-
-	menuBtn.addEventListener('click', function() {
-		let expanded = this.getAttribute('aria-expanded') === 'true' || false;
-		this.setAttribute('aria-expanded', 'true');
-		let menu = this.nextElementSibling;
-// 		menu.hidden = !menu.hidden;		//	if un-commented, 2nd time click on btn: no menu - just overlay
+	// take now-background page content links out of tabbing order
+	const contentLinks = document.querySelectorAll(".content a");
+	contentLinks.forEach(link => {
+		link.setAttribute("tabindex", "-1");
 	});
 
-	// reset tabbing for links
+	menuBtn.setAttribute('aria-expanded', 'true');
+
+	// focus menu-close button for easy toggle
+	closeBtn.focus();
+
+	// reset tabbing for nav links
 	const links = document.querySelectorAll("#navmenu li a");
 	links.forEach(link => {
-		console.log(link);
 		link.setAttribute("tabindex", "0");
 	});
+
+	// on click, go to link target and close nav
+	links.forEach(link => {
+		link.addEventListener('click', event => {
+			closeNav();
+			link.focus();
+		});
+	});
 }
+
+
+function closeNav() {
+	document.querySelector("nav").style.width = "0";
+	document.querySelector(".overlay").style.display = "none";
+
+	// set aria-expanded to false on menu button if nav closed
+	menuBtn.setAttribute("aria-expanded", "false");
+
+	// no tabbing to links in menu when hidden
+	const links = document.querySelectorAll("#navmenu li a");
+	links.forEach(link => {
+		link.setAttribute("tabindex", "-1");
+	});
+
+	// reset page content links to normal tabbing behavior when nav closed
+	const contentLinks = document.querySelectorAll(".content a");
+	contentLinks.forEach(link => {
+		link.removeAttribute("tabindex");
+	});
+}
+
+// close nav menu with Esc key
+navmenu.addEventListener('keyup', event => {
+	if (event.code === 'Escape' && mediaQuery.matches)
+		closeNav();
+});
+
+
 

@@ -176,9 +176,6 @@ header nav li button {
   border: none;
   height: auto;
 }
-header nav li button:focus {
-  border: 2px solid lightblue;
-}
 header nav li span {
   text-decoration: none;
   font-size: 1.2rem;

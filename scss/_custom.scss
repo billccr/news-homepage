@@ -83,7 +83,7 @@ header {
 		height: 2rem !important;
 	}
 	// menu open button
-	button {		// -------------------------- was img.menu-icon
+	button {
 		float: right;
 		margin-top: 0.4rem;
 		border: none;
@@ -103,7 +103,7 @@ header {
 		right: 0;
 		background-color: $off-white;
 		overflow-x: hidden;  // Disable horizontal scroll
-		padding-top: 7rem;   // Place content 60px from the top
+		padding-top: 7rem;   // Place content from top
 		transition: 0.5s;    // 0.5 second slide in the sidenav
 
 		li {
@@ -119,9 +119,10 @@ header {
 				background-color: transparent;
 				border: none;
 				height: auto;
-				&:focus {
-					border: 2px solid lightblue;	// indicate selection via tabbing
-				}
+//				&:focus {
+//					outline: 2px solid lightblue;	// indicate selection via tabbing
+//					outline-offset: 0.5rem;
+//				}
 			}
 			span {	// current page
 				text-decoration: none;
