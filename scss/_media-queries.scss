@@ -86,7 +86,8 @@ $dark-gray-blue: hsl(236, 13%, 42%);
 		grid-row: 1;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 1rem;
+		grid-row-gap: 1rem;
+		grid-column-gap: 2rem;
 
 		picture {
 			grid-column: 1 / 3;
@@ -119,7 +120,11 @@ $dark-gray-blue: hsl(236, 13%, 42%);
 		grid-column: 3 / 4;
 		h2 {
 			font-size: 2.5rem;
-			margin: 1.2rem 0 0;
+			margin: 2.2rem 0 0;
+			line-height: 1.2;
+		}
+		h3 {
+			font-size: 1.2rem;
 		}
 	}
 

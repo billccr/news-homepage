@@ -39,8 +39,8 @@ function openNav() {
 
 
 function closeNav() {
-	document.querySelector("nav").style.width = "0";
 	document.querySelector(".overlay").style.display = "none";
+	document.querySelector("nav").style.width = "0";
 
 	// set aria-expanded to false on menu button if nav closed
 	menuBtn.setAttribute("aria-expanded", "false");
@@ -65,4 +65,9 @@ navmenu.addEventListener('keyup', event => {
 });
 
 
-
+//
+// // Register event listener
+// mediaQuery.addListener(handleTabletChange);
+//
+// // Initial check
+// handleTabletChange(mediaQuery)
