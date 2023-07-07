@@ -10,6 +10,11 @@
 /* ==========================================================================
 	 Base styles: opinionated defaults
    ========================================================================== */
+@font-face {
+	font-family: "Inter";
+	src: local("Inter"), url("../fonts/Inter-VariableFont_slnt,wght.ttf");
+}
+
 
 html {
 	color: #222;

@@ -64,10 +64,3 @@ navmenu.addEventListener('keyup', event => {
 		closeNav();
 });
 
-
-//
-// // Register event listener
-// mediaQuery.addListener(handleTabletChange);
-//
-// // Initial check
-// handleTabletChange(mediaQuery)

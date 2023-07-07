@@ -31,7 +31,7 @@ $dark-gray-blue: hsl(236, 13%, 42%);
 			display: none;
 		}
 		nav {
-			width: auto;
+			width: auto !important;
 			height: auto;
 			display: block;
 			position: relative;
@@ -124,7 +124,8 @@ $dark-gray-blue: hsl(236, 13%, 42%);
 			line-height: 1.2;
 		}
 		h3 {
-			font-size: 1.2rem;
+			font-size: 1.3rem;
+			line-height: 1.3;
 		}
 	}
 
