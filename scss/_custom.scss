@@ -40,7 +40,7 @@ img {
 	gap: 2rem;
 }
 
-.top-articles div {
+.top-articles > div {
 	display: grid;
 	grid-template-columns: 30% auto;
 	gap: 1.5rem;
@@ -52,7 +52,6 @@ img {
 		grid-column: 2;
 		display: grid;
 		grid-template-columns: 1fr;
-		grid-template-rows: auto auto;
 		gap: 0;
 	}
 }
@@ -93,7 +92,7 @@ header {
 		}
 	}
 
-// _________ sliding nav menu for mobile layout
+	// _________ sliding nav menu for mobile layout
 	nav {
 		height: 100%;
 		width: 0;         // 0 width - change this with JavaScript
@@ -139,10 +138,10 @@ header {
 			}
 		}
 	}
-// _____________ end of sliding menu
+	// _____________ end of sliding menu
 }
 
-main {
+article.primary {
 
 	picture {
 		width: auto;
@@ -219,7 +218,7 @@ main {
 	}
 	p {
 		color: $gray-blue;
-		line-height: 1.8;
+		line-height: 1.7;
 		margin: 0;
 	}
 }
@@ -236,16 +235,16 @@ main {
 		max-width: 100%;
 		height: auto;
 	}
-	hgroup p {
+	.heading-group span {
 		color: $gray-blue;
 		font-size: 2rem;
 		font-weight: 700;
-		margin-bottom: .5rem;
+		line-height: 1;
 	}
-	hgroup h3 {
+	.heading-group h3 {
 		font-size: clamp(1.2rem, 4vw, 2.5rem);
 		line-height: 1.2;
-		margin: 0;
+		margin: 1rem 0 0;
 		a {
 			color: $very-dark-blue;
 			text-decoration: none;

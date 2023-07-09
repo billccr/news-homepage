@@ -27,14 +27,14 @@
 	<header>
 		<img class="logo" src="img/logo.svg" alt="W logo">
 		<button id="menu-btn" title="website menu" onclick="openNav()" aria-label="Open" aria-expanded="false">
-			<img class="menu-icon" src="img/icon-menu.svg" alt="menu" tabindex="-1">
+			<img class="menu-icon" src="img/icon-menu.svg" alt="menu">
 		</button>
 
 		<nav id="navmenu" aria-label="Main navigation" tabindex="-1">
 			<ul>
 				<li>
 					<button aria-label="Close" class="close-btn" onclick="closeNav()">
-						<img src="img/icon-menu-close.svg" alt="" tabindex="-1">
+						<img src="img/icon-menu-close.svg" alt="">
 					</button></li>
 				<li class="current"><span>Home</span></li>
 				<li><a href="#new">New</a></li>
@@ -45,8 +45,8 @@
 		</nav>
 	</header>
 
-	<div class="content">
-		<main>
+	<main class="content">
+		<article class="primary">
 			<picture>
 				<source media="(min-width: 40rem)" srcset="img/image-web-3-desktop.jpg">	<!-- width="1460" height="600" -->
 				<img src="img/image-web-3-mobile.jpg" alt="close-up of brightly painted wooden toy building blocks">
@@ -58,7 +58,7 @@
 			<p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
 
 			<a href="#" aria-label="read the full article">Read more</a>
-		</main>
+		</article>
 
 		<section id="new" class="new-articles" aria-label="New Articles">
 			<h2>New</h2>
@@ -84,10 +84,10 @@
 			<div>
 				<img src="img/image-retro-pcs.jpg" width="200" height="254" alt="a tabletop display of retro electronics and cassette tapes">
 				<div class="text-group">
-					<hgroup>
-						<p>01</p>
+					<div class="heading-group">
+						<span>01</span>
 						<h3><a href="#">Reviving Retro PCs</a></h3>
-					</hgroup>
+					</div>
 					<p>What happens when old PCs are given modern upgrades?</p>
 				</div>
 			</div>
@@ -95,10 +95,10 @@
 			<div>
 				<img src="img/image-top-laptops.jpg" width="200" height="254" alt="a close-up low-angle view of a laptop's keyboard">
 				<div class="text-group">
-					<hgroup>
-						<p>02</p>
+					<div class="heading-group">
+						<span>02</span>
 						<h3><a href="#">Top 10 Laptops of 2022</a></h3>
-					</hgroup>
+					</div>
 					<p>Our best picks for various needs and budgets.</p>
 				</div>
 			</div>
@@ -106,15 +106,15 @@
 			<div>
 				<img src="img/image-gaming-growth.jpg" width="200" height="254" alt="video game controller suspended above a person's open palm">
 				<div class="text-group">
-					<hgroup>
-						<p>03</p>
+					<div class="heading-group">
+						<span>03</span>
 						<h3><a href="#">The Growth of Gaming</a></h3>
-					</hgroup>
+					</div>
 					<p>How the pandemic has sparked fresh opportunities.</p>
 				</div>
 			</div>
 		</section>
-	</div>
+	</main>
 
 	<footer class="attribution">
 		<p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

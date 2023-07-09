@@ -108,19 +108,18 @@ img {
   gap: 2rem;
 }
 
-.top-articles div {
+.top-articles > div {
   display: grid;
   grid-template-columns: 30% auto;
   gap: 1.5rem;
 }
-.top-articles div img {
+.top-articles > div img {
   grid-column: 1;
 }
-.top-articles div .text-group {
+.top-articles > div .text-group {
   grid-column: 2;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
   gap: 0;
 }
 
@@ -197,15 +196,15 @@ header nav li a:active {
   background-color: hsl(233, 8%, 79%);
 }
 
-main picture {
+article.primary picture {
   width: auto;
 }
-main picture img {
+article.primary picture img {
   object-fit: cover;
   max-width: 100%;
   margin-top: 2rem;
 }
-main h1 {
+article.primary h1 {
   font-weight: 800;
   font-size: 2.7rem;
   line-height: 1;
@@ -214,12 +213,12 @@ main h1 {
   margin-bottom: 0;
   padding-right: 0.5rem;
 }
-main p {
+article.primary p {
   color: hsl(236, 13%, 42%);
   line-height: 1.7;
   margin-bottom: 1.5rem;
 }
-main a {
+article.primary a {
   text-decoration: none;
   display: inline-block;
   text-transform: uppercase;
@@ -231,7 +230,7 @@ main a {
   background-color: hsl(5, 85%, 63%);
   box-shadow: inset 0 0 3px 0 brown;
 }
-main a:hover {
+article.primary a:hover {
   background-color: hsl(240, 100%, 5%);
 }
 
@@ -265,7 +264,7 @@ main a:hover {
 }
 .new-articles p {
   color: hsl(233, 8%, 79%);
-  line-height: 1.8;
+  line-height: 1.7;
   margin: 0;
 }
 
@@ -281,22 +280,22 @@ main a:hover {
   max-width: 100%;
   height: auto;
 }
-.top-articles hgroup p {
+.top-articles .heading-group span {
   color: hsl(233, 8%, 79%);
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  line-height: 1;
 }
-.top-articles hgroup h3 {
+.top-articles .heading-group h3 {
   font-size: clamp(1.2rem, 4vw, 2.5rem);
   line-height: 1.2;
-  margin: 0;
+  margin: 1rem 0 0;
 }
-.top-articles hgroup h3 a {
+.top-articles .heading-group h3 a {
   color: hsl(240, 100%, 5%);
   text-decoration: none;
 }
-.top-articles hgroup h3 a:hover {
+.top-articles .heading-group h3 a:hover {
   color: hsl(5, 85%, 63%);
 }
 .top-articles p {
@@ -473,7 +472,7 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 4.5rem 2rem;
   }
-  main {
+  article.primary {
     grid-column: 1/3;
     grid-row: 1;
     display: grid;
@@ -481,19 +480,19 @@ footer {
     grid-row-gap: 1rem;
     grid-column-gap: 2rem;
   }
-  main picture {
+  article.primary picture {
     grid-column: 1/3;
     grid-row: 1;
   }
-  main picture img {
+  article.primary picture img {
     margin-top: 0;
   }
-  main h1 {
+  article.primary h1 {
     grid-column: 1/2;
     grid-row: 2/4;
     font-size: clamp(2.7rem, 4vw, 3.7rem);
   }
-  main a {
+  article.primary a {
     box-sizing: border-box;
     width: 12.5rem;
     padding-left: 1rem;
@@ -503,7 +502,7 @@ footer {
     letter-spacing: 0.3rem;
     text-align: center;
   }
-  main p {
+  article.primary p {
     line-height: 1.6rem;
   }
   .new-articles {
@@ -525,7 +524,7 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
-  .top-articles hgroup h3 {
+  .top-articles .heading-group h3 {
     font-size: 1.2rem;
   }
   .top-articles > div {

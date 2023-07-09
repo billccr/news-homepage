@@ -81,7 +81,7 @@ $dark-gray-blue: hsl(236, 13%, 42%);
 		gap: 4.5rem 2rem;
 	}
 
-	main {
+	article.primary {
 		grid-column: 1 / 3;
 		grid-row: 1;
 		display: grid;
@@ -135,7 +135,7 @@ $dark-gray-blue: hsl(236, 13%, 42%);
 		grid-column: 1 / 4;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 2rem;
-		hgroup h3 {
+		.heading-group h3 {
 			font-size: 1.2rem;
 		}
 	}
